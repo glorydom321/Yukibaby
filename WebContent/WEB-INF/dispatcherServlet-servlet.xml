@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.
+org/dtd/spring-beans.dtd">
+<beans>
+<!--
+	<mvc:resources mapping="/javascript/**" location="/static_resources/javascript/"/>  
+    <mvc:resources mapping="/styles/**" location="/static_resources/css/"/>  
+    <mvc:resources mapping="/images/**" location="/WEB-INF/css/images/"/>  
+ -->   
+	<bean id="localeResolver" class="org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver"></bean>
+	<!--配置控制器的映射-->
+
+	<bean id="main" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="main.do">mainPageDisplay</prop>
+			</props>
+		</property>
+	</bean>
+
+
+	<!--指定控制器的实现类，并且配置其参数的值
+	<bean id="mainPageDisplay" class="com.control.MainController>
+		<property name="service">
+			<value>services.LoginService</value>
+		</property>
+	</bean>-->
+	
+	<bean id="mainPageDisplay" class="com.control.MainController">
+	</bean>
+	
+	
+<!--配置视图-->
+
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass">
+			<value>org.springframework.web.servlet.view.InternalResourceView</value>
+		</property>
+		<property name="prefix" value="/jsp/" />  
+        <property name="suffix" value=".jsp" /> 
+	</bean>
+</beans>
+
