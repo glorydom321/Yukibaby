@@ -32,7 +32,7 @@
 	</servlet-mapping>
 
 
-<!--
+
   <servlet>
     <description></description>
     <display-name>WechatServlet</display-name>
@@ -41,9 +41,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>WechatServlet</servlet-name>
-    <url-pattern>/*</url-pattern>
+    <url-pattern>*.val</url-pattern>
   </servlet-mapping>
-  
- -->
-  
+
 </web-app>

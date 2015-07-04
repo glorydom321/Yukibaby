@@ -17,7 +17,7 @@ public class MainController implements Controller{
 	       //添加模型数据 可以是任意的POJO对象  
 	       mv.addObject("message", "Hello World!");  
 	       //设置逻辑视图名，视图解析器会根据该名字解析到具体的视图页面  
-	       mv.setViewName("main");  
+	       mv.setViewName("about");  
 		return mv;
 	}
 

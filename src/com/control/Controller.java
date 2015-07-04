@@ -17,7 +17,6 @@ import org.sword.wechat4j.user.UserManager;
 public class Controller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static Logger logger = Logger.getLogger(Controller.class);
-	private static UserManager userManager = null;
 
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
