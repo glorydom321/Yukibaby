@@ -37,11 +37,11 @@
     <description></description>
     <display-name>WechatServlet</display-name>
     <servlet-name>WechatServlet</servlet-name>
-    <servlet-class>com.control.Controller</servlet-class>
+    <servlet-class>com.control.WechatEntry</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>WechatServlet</servlet-name>
-    <url-pattern>*.val</url-pattern>
+    <url-pattern>*.throughWechat</url-pattern>
   </servlet-mapping>
 
 </web-app>

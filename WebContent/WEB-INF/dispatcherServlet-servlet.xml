@@ -13,15 +13,6 @@ org/dtd/spring-beans.dtd">
 			</props>
 		</property>
 	</bean>
-
-	<bean id="validateSignature" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
-		<property name="mappings">
-			<props>
-				<prop key="val.do">validateResult</prop>
-			</props>
-		</property>
-	</bean>
-	<bean id="validateResult" class="com.control.Validator"></bean>
 	<bean id="mainPageDisplay" class="com.control.MainController"></bean>
 	
 	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
