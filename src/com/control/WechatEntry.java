@@ -14,6 +14,9 @@ import org.sword.wechat4j.WechatSupport;
 import org.sword.wechat4j.message.CustomerMsg;
 import org.sword.wechat4j.user.UserManager;
 
+import com.service.WexinSupport;
+import com.serviceImpl.WeixinResponsePost;
+
 public class WechatEntry extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static Logger logger = Logger.getLogger(WechatEntry.class);
@@ -41,11 +44,12 @@ public class WechatEntry extends HttpServlet {
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		
-		WechatSupport support = new MyWeChatUtil(request);
-		logger.info("what request i got? " + request);
+		WexinSupport support = new WeixinResponsePost(request);
+		logger.debug("what request i got? " + request);
 		response.setCharacterEncoding("UTF-8");
 		response.setHeader("content-type", "text/html;charset=UTF-8");
 		PrintWriter out = response.getWriter();
+		
 		out.print(support.execute());
 		
 	}
